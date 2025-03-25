@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Clipboard Manager</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <!-- Login Section -->
+  <div id="login-section" class="login-section">
+    <h2>Login to Clipboard Manager</h2>
+    <input type="text" id="username-input" placeholder="Enter username" required>
+    <input type="password" id="password-input" placeholder="Enter password" required>
+    <button id="login-btn">Login</button>
+    <p id="login-error" class="error-message"></p>
+  </div>
+
+  <!-- Main Content (Hidden Initially) -->
+  <main id="main-content" style="display: none;">
+    <!-- Header -->
+    <header>
+      <h1>Modern Clipboard Manager</h1>
+      <p id="logged-in-user"></p>
+    </header>
+
+    <!-- Clipboard Manager Section -->
+    <section id="clipboard-manager-section" class="container">
+      <!-- Form Section -->
+      <section class="form-section">
+        <textarea id="text-input" rows="4" placeholder="Type your text here..."></textarea>
+        <br>
+        <select id="action-mode">
+          <option value="copy">Copy to Clipboard</option>
+          <option value="history">Add to History</option>
+          <option value="both">Both</option>
+        </select>
+        <br>
+        <button id="submit-btn">Submit</button>
+      </section>
+
+      <!-- History Section -->
+      <section class="history">
+        <h2>Text History</h2>
+        <ul class="history-list" id="history-list">
+          <!-- Dynamic History Items -->
+        </ul>
+        <button class="clear-btn" id="clear-history">Clear History</button>
+      </section>
+    </section>
+
+    <!-- Copied Text Viewer Section -->
+    <section id="copied-text-section" class="container" style="display: none;">
+      <section class="copied-text-content">
+        <h2>Copied Text History</h2>
+        <ul class="copied-text-list" id="copied-text-list">
+          <!-- Dynamic Copied Text Items -->
+        </ul>
+        <button class="clear-btn" id="clear-copied-text">Clear Copied Text History</button>
+      </section>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-buttons">
+      <button id="clipboard-manager-btn" class="footer-btn">Clipboard Manager</button>
+      <button id="copied-text-btn" class="footer-btn">Copied Text Viewer</button>
+    </div>
+    <p>Made by Abhishek Sharma</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
